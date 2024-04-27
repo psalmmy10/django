@@ -23,7 +23,7 @@
   <br />
   <center class="row">
     <form action="" method="post" class="col-md-6 col-md-offset-3">
-      {% comment %} {% csrf_token %} {% endcomment %}
+      {% csrf_token %}
       <div class="input-group">
         <input type="text" class="form-control" name="city" placeholder="Search">
         <div class="input-group-btn">
@@ -34,16 +34,16 @@
         <form>
   </center>
   <div class="row">
-    {% comment %} {% if data.country_code %} {% endcomment %}
+    {% if data.country_code %}
     <div class="col-md-6 col-md-offset-3">
         <h1>{{city}}</h1>
-        {% comment %} <h3>country code : {{data.country_code}}</h1>
+        <h3>country code : {{data.country_code}}</h1>
         <h5>coordinate : {{data.coordinate}}</h5>
         <h5>temp : {{data.temp}}</h5>
         <h5>pressure : {{data.pressure}} </h5>
-        <h5>humidity : {{data.humidity}}</h5> {% endcomment %}
+        <h5>humidity : {{data.humidity}}</h5>
     </div>
-    {% comment %} {% endif %} {% endcomment %}
+    {% endif %}
   </div>
 </body>
 
